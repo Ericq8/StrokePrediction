@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Registration</title>
+        <style>
+            form {
+                margin: 0 auto;
+                width:400px;
+    
+            }
+            button {
+                margin: 0 auto;
+                width:405px;
+                height: 55px;
+            }
+            div {
+                margin: 0 auto;
+                width:400px;
+            }
+            h1 {
+                text-align: center;
+            }
+            input {
+                height: 50px;
+            }
+        </style>
+    </head>
+    
+    <body>
+    <h1>Create your account</h1>
+    
+    <form method="post" name="form">
+        <% if (username) {%>
+        <div>
+            <b-alert show variant="danger">Username has been taken, please choose another one</b-alert>
+          </div>
+          <% } %>
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input class="form-control" type="text" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword1" name="password" pattern="(?=.*[^a-zA-Z0-9]).{8,16}$">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Enter</button>
+    </form>
+    </body>
+</html>

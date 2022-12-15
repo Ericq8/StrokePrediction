@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+        /* body {
+          background-image: url();
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+          background-color: rgba(0,0,0,0.5);
+        } */
+        .demo_bg{
+
+width: 1500px;
+
+height: 720px;
+
+background: url('https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80');
+
+background-size: cover;
+
+opacity: 0.5;
+
+}
+
+.demo{
+
+position: absolute;
+text-align: center;
+
+margin: 0 auto;
+
+padding-left: 150px;
+padding-top:150px;
+
+left: 0;
+
+top: 0;
+
+width: 1300px;
+
+height: 300px;
+
+line-height: 50px;
+
+
+color: black;
+
+}
+        </style>
+</head>
+<body>
+    <%- include('./nav.ejs')%>
+
+     <div class="demo_bg"></div>
+     <div class="demo">
+        <h1 align="left">A stroke, sometimes called a brain attack, occurs when something blocks blood supply to part of the brain or when a blood vessel in the brain bursts.</br>
+            In either case, parts of the brain become damaged or die. A stroke can cause lasting brain damage, long-term disability, or even death.</br>
+            Learn about the health conditions and lifestyle habits that can increase your risk for stroke.</br>
+        </h1><br>
+        <button onClick="window.location.href='/form';" class="btn btn-primary">Get your prediction</button>
+     </div>
+</body>
+</html>
